@@ -40,10 +40,10 @@ sudo dnf install xinput
 
 ```bash
 # Build from source
-git clone https://github.com/eufjdknasquwy/mouse-manager-linux.git
-cd mouse-manager-linux
-dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true
-./bin/Release/net8.0/linux-x64/publish/mouse-manager
+1. git clone https://github.com/eufjdknasquwy/mouse-manager-linux.git
+2. cd mouse-manager-linux
+3. dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true
+4. ./bin/Release/net8.0/linux-x64/publish/mouse-manager
 ```
 
 
@@ -91,8 +91,8 @@ sudo dnf install xinput
 
 ```bash
 # Собрать из исходников
-git clone https://github.com/eufjdknasquwy/mouse-manager-linux.git
-cd mouse-manager-linux
-dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true
-./bin/Release/net8.0/linux-x64/publish/mouse-manager
+1. git clone https://github.com/eufjdknasquwy/mouse-manager-linux.git
+2. cd mouse-manager-linux
+3. dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true
+4. ./bin/Release/net8.0/linux-x64/publish/mouse-manager
 ```
