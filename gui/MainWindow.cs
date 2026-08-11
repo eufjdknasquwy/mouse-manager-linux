@@ -1,5 +1,6 @@
 #nullable disable
 using Gtk;
+using GLib;
 using System;
 using XInputManager = Modules.XInputManager;
 using Modules;
@@ -55,10 +56,17 @@ namespace Gui {
             this.create_scale();
             this.create_checkbox();
             this.xinput_manager.on_mouse_change(this.combobox, EventArgs.Empty);
+
+            GLib.Timeout.Add(500, refresh);
         }
         public void quit(object sender, ResponseArgs args)
         {
             if (args.ResponseId == ResponseType.Ok) Environment.Exit(0);
+        }
+        public bool refresh()
+        {
+            this.xinput_manager.on_mouse_change(this.combobox, EventArgs.Empty);
+            return true;
         }
         public void set_margin_all(Gtk.Widget widget)
         {
